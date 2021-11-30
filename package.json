@@ -1,6 +1,8 @@
 {
-  "name": "late-ui",
-  "version": "1.0.2",
+  "name": "pins",
+  "version": "1.0.3",
+  "author": "whl114",
+  "license": "ISC",
   "files": [
     "dist"
   ],
