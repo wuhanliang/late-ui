@@ -1,11 +1,11 @@
 {
   "name": "@whl114/late-ui",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "whl114",
   "license": "ISC",
   "private": false,
   "files": [
-    "dist"
+    "lib"
   ],
   "main": "./lib/late-ui.umd.js",
   "module": "./lib/late-ui.es.js",
