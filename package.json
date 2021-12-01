@@ -1,23 +1,26 @@
 {
-  "name": "pins",
-  "version": "1.0.3",
+  "name": "@whl114/late-ui",
+  "version": "1.0.4",
   "author": "whl114",
   "license": "ISC",
+  "private": false,
   "files": [
     "dist"
   ],
-  "main": "./dist/late-ui.umd.js",
-  "module": "./dist/late-ui.es.js",
+  "main": "./lib/late-ui.umd.js",
+  "module": "./lib/late-ui.es.js",
   "exports": {
     ".": {
-      "import": "./dist/my-lib.es.js",
-      "require": "./dist/my-lib.umd.js"
+      "import": "./lib/my-lib.es.js",
+      "require": "./lib/my-lib.umd.js"
     }
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "pub": "yarn publish --registry http://registry.npmjs.org --access public",
+    "pub:build": "./scripts/publish.bat"
   },
   "dependencies": {
     "vue": "^3.2.16"
