@@ -1,26 +1,25 @@
 {
   "name": "@whl114/late-ui",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "whl114",
   "license": "ISC",
   "private": false,
   "files": [
-    "lib"
+    "dist"
   ],
-  "main": "./lib/late-ui.umd.js",
-  "module": "./lib/late-ui.es.js",
+  "main": "./dist/late-ui.umd.js",
+  "module": "./dist/late-ui.es.js",
   "exports": {
     ".": {
-      "import": "./lib/my-lib.es.js",
-      "require": "./lib/my-lib.umd.js"
+      "import": "./dist/late-ui.es.js",
+      "require": "./dist/late-ui.umd.js"
     }
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build -w",
     "serve": "vite preview",
-    "pub": "yarn publish --registry http://registry.npmjs.org --access public",
-    "pub:build": "./scripts/publish.bat"
+    "pub": "yarn publish --registry http://registry.npmjs.org --access public"
   },
   "dependencies": {
     "vue": "^3.2.16"
