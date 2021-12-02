@@ -8,7 +8,7 @@ export default defineConfig(({ command, mode }) => {
     ],
   }
 
-  if (command === 'build') {
+  if (command === 'build') { // 打包调用
     reslut.build = {
       // outDir: 'dist',
       lib: {
