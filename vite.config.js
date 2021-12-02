@@ -1,18 +1,19 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 const path = require('path')
-
 export default defineConfig(({ command, mode }) => {
   const reslut = {
-    plugins: [vue()],
+    plugins: [
+      vue()
+    ],
   }
 
   if (command === 'build') {
     reslut.build = {
-      outDir: 'lib',
+      // outDir: 'dist',
       lib: {
         entry: path.resolve(__dirname, 'src/packages/index.js'),
-        name: 'LateUi',
+        name: 'late-ui',
         fileName: (format) => `late-ui.${format}.js`
       },
       rollupOptions: {

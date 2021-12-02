@@ -1,6 +1,6 @@
 import Modal from './src/index.vue'
 
 Modal.install = (Vue) => {
-  Vue.component(Modal.name, Modal)
+  Vue.component('LModal', Modal)
 }
 export default Modal
