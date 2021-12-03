@@ -17,7 +17,7 @@ if(typeof window !== 'undefined' && window.Vue) {
   install(window.vue)
 }
 export {
-  Table,
+  Table, 
   Modal
 }
 

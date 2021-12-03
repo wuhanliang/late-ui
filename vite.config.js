@@ -1,15 +1,28 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 const path = require('path')
+import { resolve } from 'path'
 export default defineConfig(({ command, mode }) => {
-  const reslut = {
+  const result = {
     plugins: [
       vue()
     ],
+    resolve: {
+      alias: {
+        "@": resolve(__dirname, 'src')
+      }
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@import "./src/assets/scss/style.scss";`
+        }
+      }
+    }
   }
 
   if (command === 'build') { // 打包调用
-    reslut.build = {
+    result.build = {
       // outDir: 'dist',
       lib: {
         entry: path.resolve(__dirname, 'src/packages/index.js'),
@@ -31,5 +44,5 @@ export default defineConfig(({ command, mode }) => {
 
 
 
-  return reslut
+  return result
 })

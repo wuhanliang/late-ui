@@ -1,10 +1,8 @@
 <template>
   <div>
-    Modal
+    feafe
   </div>
 </template>
-<script>
-export default {
-  name: 'LModal'
-}
+<script setup>
+ 
 </script>

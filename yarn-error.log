@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\huawei\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js publish
+  C:\Program Files\nodejs\node.exe C:\Users\huawei\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
 
 PATH: 
   C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\Program Files\TortoiseSVN\bin;D:\flutter_windows_1.22.3-stable\flutter\bin;D:\Java\jdk1.8.0_181\bin;D:\Java\jdk1.8.0_181\jre\bin;D:\laragon\bin\php\php-7.2.19-Win32-VC15-x64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Users\huawei\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\huawei\AppData\Roaming\npm;D:\WebStorm 2020.1\bin;C:\Users\huawei\AppData\Local\Programs\Microsoft VS Code\bin;E:\Program Files\DevEco Studio 2.1.0.501\bin;C:\Users\huawei\AppData\Local\Microsoft\WindowsApps;C:\Users\huawei\AppData\Local\atom\bin
@@ -14,15 +14,15 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: getaddrinfo ENOTFOUND wwww.npmjs.org
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)
+  Error: EPERM: operation not permitted, unlink 'F:\app\personal\wtal\late-ui\node_modules\esbuild-windows-64\esbuild.exe'
 
 npm manifest: 
   {
-    "name": "pins",
-    "version": "1.0.3",
+    "name": "@whl114/late-ui",
+    "version": "1.0.7",
     "author": "whl114",
     "license": "ISC",
+    "private": false,
     "files": [
       "dist"
     ],
@@ -30,17 +30,19 @@ npm manifest:
     "module": "./dist/late-ui.es.js",
     "exports": {
       ".": {
-        "import": "./dist/my-lib.es.js",
-        "require": "./dist/my-lib.umd.js"
+        "import": "./dist/late-ui.es.js",
+        "require": "./dist/late-ui.umd.js"
       }
     },
     "scripts": {
       "dev": "vite",
-      "build": "vite build",
-      "serve": "vite preview"
+      "build": "vite build -w",
+      "serve": "vite preview",
+      "pub": "yarn publish --registry http://registry.npmjs.org --access public"
     },
     "dependencies": {
-      "vue": "^3.2.16"
+      "vue": "^3.2.16",
+      "vue-router": "^4.0.0"
     },
     "devDependencies": {
       "@vitejs/plugin-vue": "^1.9.3",
