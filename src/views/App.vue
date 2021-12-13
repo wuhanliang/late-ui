@@ -1,13 +1,5 @@
 <template>
-  <router-view
-    class="view view-left-sidebar"
-    name="LeftSidebar"
-  />
-  <router-view class="view view-left" />
-  <router-view
-    class="view view-right-sidebar"
-    name="RightSidebar"
-  />
+  <router-view class="view view-container" />
 </template>
 
 <script setup>
