@@ -1,6 +1,6 @@
 <template>
   <div>
-    Modal
+    Modalwwweee
   </div>
 </template>
 <script>

@@ -17,7 +17,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build -w",
     "serve": "vite preview",
     "pub": "yarn publish --registry http://registry.npmjs.org --access public"
   },
